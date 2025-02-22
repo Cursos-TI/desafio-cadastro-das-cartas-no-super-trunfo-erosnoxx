@@ -4,12 +4,12 @@ int main() {
     // Declaração de variáveis para os dados da Carta 1
     char state1, code1[3], city1[50];
     int population1, touristAttractions1;
-    float pib1, area1;
+    float pib1, area1, popDensity1, pibPerCapita1;
 
     // Declaração de variáveis para os dados da Carta 2
     char state2, code2[3], city2[50];
     int population2, touristAttractions2;
-    float pib2, area2;
+    float pib2, area2, popDensity2, pibPerCapita2;
 
     // Entrada de dados para a Carta 1
     printf("Digite o estado (A-H) da Carta 1: ");
@@ -57,6 +57,13 @@ int main() {
     printf("Digite o número de pontos turísticos da Carta 2: ");
     scanf("%d", &touristAttractions2);  // Lê o número de pontos turísticos da Carta 2
 
+    popDensity1 = (float) population1 / area1;
+    popDensity2 = (float) population2 / area2;
+
+    pibPerCapita1 = (float) pib1 / population1;
+    pibPerCapita2 = (float) pib2 / population2;
+
+
     printf("\n===== CARTA 1 =====\n");  // Exibe o título da Carta 1
     printf("Estado: %c\n", state1);  // Exibe o estado da Carta 1
     printf("Código: %s\n", code1);  // Exibe o código da Carta 1
@@ -65,6 +72,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);  // Exibe a área da Carta 1
     printf("PIB: R$ %.2f\n", pib1);  // Exibe o PIB da Carta 1
     printf("Pontos turísticos: %d\n", touristAttractions1);  // Exibe o número de pontos turísticos da Carta 1
+    printf("Densidade populacional: %.2f\n", popDensity1);
+    printf("PIB Per Capita: %.2f\n", pibPerCapita1);
 
     printf("\n===== CARTA 2 =====\n");  // Exibe o título da Carta 2
     printf("Estado: %c\n", state2);  // Exibe o estado da Carta 2
@@ -74,6 +83,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);  // Exibe a área da Carta 2
     printf("PIB: R$ %.2f\n", pib2);  // Exibe o PIB da Carta 2
     printf("Pontos turísticos: %d\n", touristAttractions2);  // Exibe o número de pontos turísticos da Carta 2
+    printf("Densidade populacional: %.2f\n", popDensity2);
+    printf("PIB Per Capita: %.2f\n", pibPerCapita2);
 
     return 0;  // Finaliza o programa com sucesso
 }
