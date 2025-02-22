@@ -57,11 +57,11 @@ int main() {
     printf("Digite o número de pontos turísticos da Carta 2: ");
     scanf("%d", &touristAttractions2);  // Lê o número de pontos turísticos da Carta 2
 
-    popDensity1 = (float) population1 / area1;
-    popDensity2 = (float) population2 / area2;
+    popDensity1 = (float) (population1 / area1);
+    popDensity2 = (float) (population2 / area2);
 
-    pibPerCapita1 = (float) pib1 / population1;
-    pibPerCapita2 = (float) pib2 / population2;
+    pibPerCapita1 = (float) (pib1 / population1);
+    pibPerCapita2 = (float) (pib2 / population2);
 
 
     printf("\n===== CARTA 1 =====\n");  // Exibe o título da Carta 1
